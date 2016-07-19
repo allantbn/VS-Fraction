@@ -4,22 +4,24 @@ namespace FractionTest
 {
     public class Fraction
     {
-        private int _integerValue;
-        private int v;
+        private readonly int _integerValue;
+        private readonly int _denominator;
 
         public Fraction (int integerValue)
         {
             _integerValue = integerValue;
+            _denominator = 1;
         }
 
         public Fraction(int numerator, int denominator)
         {
             _integerValue = numerator;
+            _denominator = denominator;
         }
 
         public Fraction Plus(Fraction fraction)
         {
-            return new Fraction(_integerValue + fraction._integerValue);
+            return new Fraction(_integerValue + fraction._integerValue, _denominator);
         }
 
         public int IntValue()
@@ -34,7 +36,7 @@ namespace FractionTest
 
         internal int GetDenominator()
         {
-            return 5;
+            return _denominator;
         }
     }
 }

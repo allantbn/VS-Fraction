@@ -40,7 +40,7 @@ namespace FractionTest
         }
 
         [TestMethod]
-        public void NonTrivialDenominator()
+        public void NonTrivialButSameDenominator()
         {
             Fraction sum = new Fraction(1,5).Plus(new Fraction(2, 5));
             Assert.AreEqual(3, sum.GetNumerator());
