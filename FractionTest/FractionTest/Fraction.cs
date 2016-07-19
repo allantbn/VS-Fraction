@@ -4,13 +4,11 @@ namespace FractionTest
 {
     public class Fraction
     {
-        private readonly int _denominator;
         private readonly int _numerator;
+        private readonly int _denominator;
 
-        public Fraction (int integerValue)
+        public Fraction (int integerValue) : this(integerValue, 1)
         {
-            _numerator = integerValue;
-            _denominator = 1;
         }
 
         public Fraction(int numerator, int denominator)
@@ -19,9 +17,9 @@ namespace FractionTest
             _denominator = denominator;
         }
 
-        public Fraction Plus(Fraction fraction)
+        public Fraction Plus(Fraction that)
         {
-            return new Fraction(_numerator + fraction._numerator, _denominator);
+            return new Fraction(_numerator + that._numerator, _denominator);
         }
 
         public int IntValue()
