@@ -38,5 +38,13 @@ namespace FractionTest
         {
             Assert.AreEqual(-2, new Fraction(-3).Plus(new Fraction(1)).IntValue());
         }
+
+        [TestMethod]
+        public void NonTrivialDenominator()
+        {
+            Fraction sum = new Fraction(1,5).Plus(new Fraction(2, 5));
+            Assert.AreEqual(3, sum.GetNumerator());
+            Assert.AreEqual(5, sum.GetDenominator());
+        }
     }
 }
