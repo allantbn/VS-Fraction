@@ -14,7 +14,7 @@ namespace FractionTest
         public Fraction Plus(Fraction fraction)
         {
             if (fraction._integerValue != 0) 
-                return fraction;
+                return new Fraction(_integerValue + fraction._integerValue);
             else
                 return this;
         }

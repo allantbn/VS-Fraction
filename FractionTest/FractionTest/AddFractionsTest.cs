@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FractionTest
@@ -27,6 +28,13 @@ namespace FractionTest
         {
             Fraction sum = new Fraction(0).Plus(new Fraction(5));
             Assert.AreEqual(5, sum.IntValue());
+        }
+
+        [TestMethod]
+        public void NonNegativeNonZeroOperands()
+        {
+            Fraction sum = new Fraction(3).Plus(new Fraction(4));
+            Assert.AreEqual(7, sum.IntValue());
         }
     }
 }
