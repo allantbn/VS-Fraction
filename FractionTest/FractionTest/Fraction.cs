@@ -4,8 +4,11 @@ namespace FractionTest
 {
     public class Fraction
     {
-        public Fraction (int integerValue) {
-            
+        private int _integerValue;
+
+        public Fraction (int integerValue)
+        {
+            _integerValue = integerValue;
         }
 
         public Fraction Plus(Fraction fraction)
@@ -15,7 +18,7 @@ namespace FractionTest
 
         public int IntValue()
         {
-            return 0;
+            return _integerValue;
         }
     }
 }
