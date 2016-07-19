@@ -36,5 +36,12 @@ namespace FractionTest
             Fraction sum = new Fraction(3).Plus(new Fraction(4));
             Assert.AreEqual(7, sum.IntValue());
         }
+
+        [TestMethod]
+        public void NegativeInputsAndNegativeOutput()
+        {
+            Fraction sum = new Fraction(-3).Plus(new Fraction(1));
+            Assert.AreEqual(-2, sum.IntValue());
+        }
     }
 }
