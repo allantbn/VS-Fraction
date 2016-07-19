@@ -13,7 +13,10 @@ namespace FractionTest
 
         public Fraction Plus(Fraction fraction)
         {
-            return this;
+            if (fraction._integerValue != 0) 
+                return fraction;
+            else
+                return this;
         }
 
         public int IntValue()
