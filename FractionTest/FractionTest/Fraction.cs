@@ -24,12 +24,12 @@ namespace FractionTest
 
         public Fraction Plus(Fraction fraction)
         {
-            return new Fraction(_integerValue + fraction._integerValue, _denominator);
+            return new Fraction(_numerator + fraction._numerator, _denominator);
         }
 
         public int IntValue()
         {
-            return _integerValue;
+            return _numerator;
         }
 
         internal int GetNumerator()
