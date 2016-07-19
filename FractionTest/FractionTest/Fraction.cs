@@ -27,14 +27,29 @@ namespace FractionTest
             return _numerator;
         }
 
-        internal int GetNumerator()
+        public int GetNumerator()
         {
             return _numerator;
         }
 
-        internal int GetDenominator()
+        public int GetDenominator()
         {
             return _denominator;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType().IsAssignableFrom(typeof(Fraction)))
+            {
+                Fraction that = (Fraction) obj;
+                return _numerator == that._numerator && _denominator == that._denominator;
+            }
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("%d/%d", _numerator, _denominator);
         }
     }
 }
