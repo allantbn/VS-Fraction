@@ -12,6 +12,11 @@ namespace FractionTest
         [TestMethod]
         public void ZeroPlusZero()
         {
+            CheckAddFractionsAsIntegers();
+        }
+
+        private static void CheckAddFractionsAsIntegers()
+        {
             Assert.AreEqual(new Fraction(0), new Fraction(0).Plus(new Fraction(0)));
         }
 
