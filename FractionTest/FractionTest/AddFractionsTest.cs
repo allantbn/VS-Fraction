@@ -36,15 +36,15 @@ namespace FractionTest
         [TestMethod]
         public void NegativeInputsAndNegativeOutput()
         {
-            Assert.AreEqual(-2, new Fraction(-3).Plus(new Fraction(1)).IntValue());
+            Assert.AreEqual(new Fraction(-2), new Fraction(-3).Plus(new Fraction(1)));
         }
 
         [TestMethod]
         public void NonTrivialButSameDenominator()
         {
             Fraction sum = new Fraction(1,5).Plus(new Fraction(2, 5));
-            Assert.AreEqual(3, sum.GetNumerator());
-            Assert.AreEqual(5, sum.GetDenominator());
+            Assert.AreEqual(new Fraction(3, 5), sum);
+
         }
     }
 }
