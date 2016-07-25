@@ -12,25 +12,26 @@ namespace FractionTest
         [TestMethod]
         public void ZeroPlusZero()
         {
-            Assert.AreEqual(0, new Fraction(0).Plus(new Fraction(0)).IntValue());
+            Assert.AreEqual(new Fraction(0), new Fraction(0).Plus(new Fraction(0)));
         }
 
         [TestMethod]
         public void NonZeroPlusZero()
         {
-            Assert.AreEqual(3, new Fraction(3).Plus(new Fraction(0)).IntValue()); 
+            Assert.AreEqual(new Fraction(3), new Fraction(3).Plus(new Fraction(0)));
         }
 
         [TestMethod]
         public void ZeroPlusNonZero()
         {
-            Assert.AreEqual(5, new Fraction(0).Plus(new Fraction(5)).IntValue());
+            Assert.AreEqual(new Fraction(5), new Fraction(0).Plus(new Fraction(5)));
+
         }
 
         [TestMethod]
         public void NonNegativeNonZeroOperands()
         {
-            Assert.AreEqual(7, new Fraction(3).Plus(new Fraction(4)).IntValue());
+            Assert.AreEqual(new Fraction(7), new Fraction(3).Plus(new Fraction(4)));
         }
 
         [TestMethod]
